@@ -5,10 +5,10 @@
     <title>Title</title>
 </head>
 <body>
-<a href="/">Show All Todo's</a><br/>
-    Task Name :<span th:text="${todo.taskname}"></span><br/>
-    Due Date  :<span th:text="${todo.duedate}"></span><br/>
-    Priority :<span th:text="${todo.priority}"></span><br/>
-    <a th:href="@{delete/{id}(id=${todo.id})}">Delete this Item</a>
+<a href="/">Show All Cars</a><br/>
+    Car Name :<span th:text="${car.year}"></span><br/>
+    Car Make  :<span th:text="${car.make}"></span><br/>
+    Model :<span th:text="${car.model}"></span><br/>
+    <a th:href="@{delete/{id}(id=${car.id})}">Delete this Item</a>
 </body>
 </html>

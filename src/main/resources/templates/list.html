@@ -5,22 +5,22 @@
     <title>Title</title>
 </head>
 <body>
-<a href="/add">Add a Todo Item</a><br/>
+<a href="/add">Add a Car</a><br/>
 <table>
 <!--     <tr> tag defines a row in an HTML table, The cells inside it are defined using the <th> (a header cell) or the <td> (a standard cell). -->
     <tr>
-        <th style="padding:10px">Task Name</th>
-        <th style="padding:10px">Due Date</th>
-        <th style="padding:10px">Priority</th>
+        <th style="padding:10px">Year</th>
+        <th style="padding:10px">Make</th>
+        <th style="padding:10px">Model</th>
     </tr>
-    <tr th:each="todo : ${todos}">
-        <td style="padding:10px" th:text="${todo.taskname}"></td>
-        <td style="padding:10px" th:text="${todo.duedate}"></td>
-        <td style="padding:10px" th:text="${todo.priority}"></td>
+    <tr th:each="car : ${cars}">
+        <td style="padding:10px" th:text="${car.year}"></td>
+        <td style="padding:10px" th:text="${car.make}"></td>
+        <td style="padding:10px" th:text="${car.model}"></td>
         <td>
-            <a th:href="@{/update/{id}(id=${todo.id})}">Update</a> -
-            <a th:href="@{/detail/{id}(id=${todo.id})}">Details</a> -
-            <a th:href="@{/delete/{id}(id=${todo.id})}">Delete</a>
+            <a th:href="@{/update/{id}(id=${car.id})}">Update</a> -
+            <a th:href="@{/detail/{id}(id=${car.id})}">Details</a> -
+            <a th:href="@{/delete/{id}(id=${car.id})}">Delete</a>
         </td></tr>
 </table>
 
